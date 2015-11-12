@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="zh">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>神秘诅咒 已有上千人中招</title>
+<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="keywords" content="你造吗，愚人节当天必须要说假话哦，不然就......">
+<meta name="description" content="你造吗，愚人节当天必须要说假话哦，不然就......">
+</head>
+<style type="text/css">
+html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,label,textarea,p{margin:0;padding:0;-webkit-text-size-adjust:none;}
+body,html{text-align:left;height:100%;width:100%;font-family:"Microsoft YaHei",Arial,sans-serif;font-size:62.5%;font-weight:400; color: #dca5e6; background-color: #140019;}
+ul{list-style:none}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent; color: #dca5e6;}
+section{display:block}
+.clearfix:after{content:"\0020";display:block;height:0;visibility:hidden;clear:both}
+.clearfix{zoom:1}
+.red{color: #d41c53;}
+img{display:block; max-width: 100%;}
+#loading{position:fixed; width: 100%; height: 100%; background: #140019; bottom: 0; right: 0; left: 0; top: 0; z-index: 999;}
+.spinner{width: 150px; height:60px; position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-75px; text-align: center;} 
+#loadingNUM{position:absolute;top:50%;left:50%; width: 100%; font-size: 24px; text-align: center; width: 200px; margin: -10px 0 0 -100px;}
+.spinner > div {width: 30px; height: 30px; background-color: #ffb306; border-radius: 100%; display: inline-block; -webkit-animation: bouncedelay 1.4s infinite ease-in-out; animation: bouncedelay 1.4s infinite ease-in-out; -webkit-animation-fill-mode: both;animation-fill-mode: both;} 
+.spinner .bounce1 { -webkit-animation-delay: -0.32s; animation-delay: -0.32s;} 
+.spinner .bounce2 { -webkit-animation-delay: -0.16s; animation-delay: -0.16s;}
+.warp{width: 100%;  margin: 0 auto; min-height:100%;position:relative; height:100%; overflow:hidden;}
+.warp{background:#140019 url(images/bj.jpg) no-repeat center -30px;}
+/*.logo{width:35%; position: absolute; left: 50%; top: 0; margin-left: -17.5%; -webkit-animation:fadeIndown 0.5s ease both;animation:fadeIndown 0.5s ease both;}*/
+.tit{width:531px; height: 212px; margin: 0 auto; padding-top: 15px; -webkit-animation:zp 1.3s ease both;animation:zp 1.3s ease both;}
+.txt{margin-top:330px; width: 531px; height: 212px; font-size: 1.4em; padding: 0 0 0 65px; position: relative; -webkit-animation: zoomIn .5s linear 0s 1;
+    animation: zoomIn .5s linear 0s 1;}
+.g{position: absolute; left: 24px; top: -18px; width:77px; height: 84px; -webkit-animation:beauty 3s infinite alternate;-moz-animation:beauty 3s infinite alternate;}
+#exp{display: none; background: #130017;width: 100%; height: 100%;}
+.exp_tit{margin:0 auto;width:90%;padding-top: 5%; -webkit-animation:fadeIndown 0.5s ease both;animation:fadeIndown 0.5s ease both;}
+.btn{width: 100%; height: 80px; position: absolute; left: 0; bottom: 130px;}
+.btn a{width:264px; height: 80px; display: inline-block; margin-left: 36px;-webkit-animation:rotateCubeTopIn .5s 1.5s ease-in both; animation:rotateCubeTopIn .5s 1.5s ease-in both;}
+.pop_bg{position:fixed!important;_position:absolute;top:0;right:0;bottom:0;left:0;z-index:99;background-color:#000; opacity:0.9; _top:0 !important;filter:alpha(opacity=90);display: none;}
+.pop{position: fixed; left: 0; top: 15%; z-index: 9999; width: 100%;  display: none;}
+#confirm .confirm_box{background: #55216d;  width: 75%; margin: 0 auto; text-align: center; padding: 20px 0; -webkit-animation: moveCircle ease-in-out 1.2s both;animation: moveCircle ease-in-out 1.2s both;}
+.f4{font-size: 42px; padding: 10px;}
+#conBtn{margin-top: 20px; display: inline-block; width: 150px; height: 62px;}
+.exp_list{padding:5% 5% 0;}
+.exp_list li{margin-bottom: 3%;}
+.exp_list li p{font-size: 28px;}
+.exp_list li:nth-child(1){-webkit-animation:zoomInLeft .5s .5s ease-in both; animation:zoomInLeft .5s .5s ease-in both;}
+.exp_list li:nth-child(2){-webkit-animation:zoomInLeft .5s 4.5s ease-in both; animation:zoomInLeft .5s 4.5s ease-in both;}
+.exp_list li:nth-child(3){-webkit-animation:zoomInLeft .5s 9s ease-in both;animation:zoomInLeft .5s 9s ease-in both;}
+.exp_list li:nth-child(4){-webkit-animation:fadeInup .5s 10s ease-in both; animation:fadeInup .5s 10s ease-in both;}
+.exp_list .turn{-webkit-animation: turn 1s linear infinite; animation: turn 1s linear infinite; width: 50%; margin: 5px auto;}
+.v_box{background: #000; border: 3px solid #55216d; width: 386px; height: 478px; text-align: center; margin: 0 auto; position: relative; /*-webkit-animation: moveCircle ease-in-out 1.2s both;animation: moveCircle ease-in-out 1.2s both;*/}
+#close{position: absolute; right: -3px; top: -53px; background: url(images/close.jpg) no-repeat; background-size: 100%; display: block; width: 56px; height: 53px; overflow: hidden; text-indent: -999px;} 
+#share{text-align:right; top: 5%; width: 80%; padding-left: 10%;}
+.foot{position: absolute; height: 91px; width: 640px; left: 0; right: 0; bottom: 0; display: block; z-index: 10; -webkit-animation:fadeInup 1.3s ease both;animation:fadeInup 1.3s ease both;}
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){
+    .btn{bottom: 105px;}   
+}
+/*css3*/
+@-webkit-keyframes bouncedelay {
+    0%,80%,100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bouncedelay {
+    0%,80%,100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0)
+    }
+
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@-webkit-keyframes fadeInup {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px)
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+}
+
+@keyframes fadeInup {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        -o-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        transform: translateY(100px)
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+}
+
+@-webkit-keyframes fadeIndown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-150px);
+        -webkit-transform: translateY(-150px);
+        -o-transform: translateY(-150px);
+        -ms-transform: translateY(-150px);
+        transform: translateY(-150px)
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+}
+
+@keyframes fadeIndown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-150px);
+        -webkit-transform: translateY(-150px);
+        -o-transform: translateY(-150px);
+        -ms-transform: translateY(-150px);
+        transform: translateY(-150px)
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+}
+
+@-webkit-keyframes zp {
+    0%,50% {
+        opacity: 0;
+        -webkit-transform: scale(6)
+    }
+
+    70% {
+        opacity: .6;
+        -webkit-transform: scale(1.5)
+    }
+
+    80% {
+        opacity: .8;
+        -webkit-transform: scale(0.8)
+    }
+
+    90% {
+        opacity: 1;
+        -webkit-transform: scale(1.2)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zp {
+    0%,50% {
+        opacity: 0;
+        transform: scale(6)
+    }
+
+    70% {
+        opacity: .6;
+        transform: scale(1.5)
+    }
+
+    80% {
+        opacity: .8;
+        transform: scale(0.8)
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1.2)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes moveCircle {
+    0% {
+        -webkit-transform: translateY(-80%);
+        -webkit-opacity: .1
+    }
+
+    5% {
+        -webkit-transform: translateY(-80%);
+        -webkit-opacity: .3
+    }
+
+    35% {
+        -webkit-transform: translateY(10%);
+        -webkit-opacity: 1
+    }
+
+    60% {
+        -webkit-transform: translateY(-13%)
+    }
+
+    65% {
+        -webkit-transform: translateY(-13%)
+    }
+
+    100% {
+        -webkit-transform: translateY(0%)
+    }
+}
+
+@keyframes moveCircle {
+    0% {
+        -webkit-transform: translateY(-80%);
+        -webkit-opacity: .1;
+        transform: translateY(-80%);
+        opacity: .1
+    }
+
+    5% {
+        -webkit-transform: translateY(-80%);
+        -webkit-opacity: .3;
+        transform: translateY(-80%);
+        opacity: .3
+    }
+
+    35% {
+        -webkit-transform: translateY(10%);
+        -webkit-opacity: 1;
+        transform: translateY(10%);
+        opacity: 1
+    }
+
+    60% {
+        -webkit-transform: translateY(-13%);
+        transform: translateY(-13%)
+    }
+
+    65% {
+        -webkit-transform: translateY(-13%);
+        transform: translateY(-13%)
+    }
+
+    100% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%)
+    }
+}
+
+@-webkit-keyframes rotateCubeTopIn {
+    0% {
+        opacity: .3;
+        -webkit-transform: translateY(100%) rotateX(-90deg)
+    }
+
+    50% {
+        -webkit-animation-timing-function: ease-out;
+        -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg)
+    }
+}
+
+@keyframes rotateCubeTopIn {
+    0% {
+        opacity: .3;
+        -webkit-transform: translateY(100%) rotateX(-90deg);
+        transform: translateY(100%) rotateX(-90deg)
+    }
+
+    50% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
+        transform: translateY(50%) translateZ(-200px) rotateX(-45deg)
+    }
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0,0,0);
+        transform: scale3d(0,0,0)
+    }
+
+    50% {
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3) opacity:.7
+    }
+
+    100% {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1) opacity:1
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0,0,0);
+        transform: scale3d(0,0,0)
+    }
+
+    50% {
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3);
+        opacity: .7
+    }
+
+    100% {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes beauty {
+    0% {
+        -webkit-transform: translate(0,-8px);
+        opacity: .1
+    }
+
+    100% {
+        -webkit-transform: translate(-5px,13px);
+        opacity: 1
+    }
+}
+
+@keyframes beauty {
+    0% {
+        transform: translate(0,-8px);
+        opacity: .1
+    }
+
+    100% {
+        transform: translate(-5px,13px);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1,.1,.1) translate3d(-1000px,0,0);
+        transform: scale3d(.1,.1,.1) translate3d(-1000px,0,0);
+        -webkit-animation-timing-function: cubic-bezier(0.55,.055,.675,.19);
+        animation-timing-function: cubic-bezier(0.55,.055,.675,.19)
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475,.475,.475) translate3d(10px,0,0);
+        transform: scale3d(.475,.475,.475) translate3d(10px,0,0);
+        -webkit-animation-timing-function: cubic-bezier(0.175,.885,.32,1);
+        animation-timing-function: cubic-bezier(0.175,.885,.32,1)
+    }
+}
+
+@keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1,.1,.1) translate3d(-1000px,0,0);
+        -ms-transform: scale3d(.1,.1,.1) translate3d(-1000px,0,0);
+        transform: scale3d(.1,.1,.1) translate3d(-1000px,0,0);
+        -webkit-animation-timing-function: cubic-bezier(0.55,.055,.675,.19);
+        animation-timing-function: cubic-bezier(0.55,.055,.675,.19)
+    }
+
+    80% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475,.475,.475) translate3d(10px,0,0);
+        -ms-transform: scale3d(.475,.475,.475) translate3d(10px,0,0);
+        transform: scale3d(.475,.475,.475) translate3d(10px,0,0);
+        -webkit-animation-timing-function: cubic-bezier(0.175,.885,.32,1);
+        animation-timing-function: cubic-bezier(0.175,.885,.32,1)
+    }
+}
+
+@-webkit-keyframes turn {
+    from {
+        -webkit-transform: rotateZ(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotateZ(180deg)
+    }
+
+    to {
+        -webkit-transform: rotateZ(360deg)
+    }
+}
+
+@keyframes turn {
+    from {
+        transform: rotateZ(0deg)
+    }
+
+    50% {
+        transform: rotateZ(180deg)
+    }
+
+    to {
+        transform: rotateZ(360deg)
+    }
+}
+
+
+</style>
+<body>
+<div id="loading">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+    <div id="loadingNUM"></div>
+</div>
+<div class="warp" style="display:none">
+    <section class="main">        
+        <div class="tit"><img src="images/t.png"></div>
+        <div class="txt">
+            <div class="g"><img src="images/g.png"></div>
+            <img class="b" src="images/txt.png">
+        </div>
+        <div class="btn">
+            <a id="yesBtn" href="javascript:;"><img src="images/yes.jpg"></a>          
+            <a id="noBtn" href="javascript:;"><img src="images/no.jpg"></a>          
+        </div>
+    </section>
+    <section id="exp">
+        <div class="exp_tit"><img src="images/e1.png"></div>
+        <ul class="exp_list">
+            <li>
+                <p>1、请先闭上你的眼睛，专心回想你想要咒杀的对象的脸。</p>
+                <p>那家伙的脸……我想忘也忘不了的，立刻闭上眼回想他的面容特征，再来是什么呢？</p>
+            </li>
+            <li>
+                <p>2、接着请仔细的想像该如何咒杀他的方式。我立刻把脑海中所有能想到的痛苦死法都回想一遍，再来呢？</p>
+            </li>
+            <li>
+                <p>3、最后请睁开眼睛，跟着即将聆听到的咒语，一起念。</p>
+            </li>
+            <li>
+                <div class="turn"><img src="images/turn.png"></div>
+            </li>
+        </ul>
+    </section>  
+</div>
+<a href="http://gdjh.vxinyou.com/zt/zhenggu/down/index.php" id="gameBtn" class="foot">
+    <img  id="down" src="images/f.jpg">
+</a>
+<div id="confirm" class="pop">
+    <div class="confirm_box">
+        <p class="f4">您还是试试吧</p>
+        <a href="javascript:;" id="conBtn"><img src="images/confirm.jpg"></a>
+    </div>
+</div>
+<div id="video" class="pop">
+    <div id="vBox" class="v_box">
+        <a id="close" href="javascript:;">关闭</a>
+        <img id="kp" src="images/zg1.jpg">    
+        <audio preload="auto" loop="loop" id="tsvideo">
+            <source src="http://gdjh.vxinyou.com/zt/zhenggu/images/z.ogg" type="audio/ogg">
+            <source src="http://gdjh.vxinyou.com/zt/zhenggu/images/z.mp3" type="audio/mpeg">
+            你的浏览器不支持html5的audio标签
+        </audio>
+    </div>
+</div>
+<div id="share" class="pop">
+    <img src="images/share.png">
+</div>
+<div class="pop_bg"></div>
+<script type="text/javascript">
+    //错误
+window.onerror = function(msg, file, line){
+    var error = 'File: ' + file + '\r\nLine: ' + line + '\r\nMsg: ' + msg;
+    alert(error);
+    return true;
+};
+</script>
+<script type="text/javascript" src="http://images.vxinyou.com/jsCommon/jquery-1.7.2.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+//预加载
+var LoadImage = function(obj){
+    this.newimages = [];
+    this.count = 0;
+    this.arr = (typeof obj.imgs!="object")? [obj.imgs] : obj.imgs;
+    this.len =this.arr.length;
+    this.per=(1/this.len);
+    this.loading = obj.loading;
+    this.done = obj.done;
+    this.Run();
+};
+
+LoadImage.prototype.imageloadpost = function() {
+    var self = this,num=null;
+    self.count++;
+    num = self.count*self.per;
+    num = parseInt(num*100);
+    self.loading(num);
+    if (self.count==self.len){
+        self.loading(100);
+        setTimeout(function(){
+            $("#loading").remove();
+            $('.warp').show();
+        },500);
+    }
+};
+
+LoadImage.prototype.Run = function() {
+    var self = this;
+    for (var i=0; i<self.arr.length; i++){
+        self.newimages[i]=new Image();
+        self.newimages[i].src=self.arr[i];
+        self.newimages[i].onload=function(){
+            self.imageloadpost();
+        }
+        self.newimages[i].onerror=function(){
+            self.imageloadpost();
+        }
+    }
+};
+
+var LoadingSwit = function(num){
+    document.getElementById("loadingNUM").innerHTML=num+"%";
+};
+
+
+$("#noBtn").on("touchstart",function(){
+    $("#confirm").show();
+    $(".pop_bg").show();
+});
+
+// 恐怖图片
+function rotGlass(){
+    var tag = $('#kp'),
+        times = 150,
+        num = 0;        
+        setInterval(function(){
+            if(num>39){
+                num = 0; 
+            }
+            num++;
+            tag.attr({'src':'images/z/zg'+num+'.jpg'});   
+        },times)
+}
+
+
+$("#yesBtn,#conBtn").on("touchstart",function(){
+    $("#confirm").hide();
+    $(".pop_bg").hide();
+
+    $(".main").hide(100);
+    $("#exp").show(100);
+    setTimeout(function(){
+        $("#video").show();
+       // $("#vBox").append('<img src="images/z.gif">');
+        rotGlass();
+        $('audio').get(0).play();
+        $(".pop_bg").show();
+    },15000)
+});
+
+$("#close").on("touchstart",function(){
+     $('audio').get(0).pause();
+    $("#video").hide(100);
+    $("#share").show(100);
+});
+
+
+var MyLoadImage = new LoadImage({
+    imgs: ['http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg0.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg1.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg2.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg3.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg4.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg5.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg6.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg7.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg8.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg9.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg10.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg11.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg12.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg13.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg14.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg15.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg16.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg17.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg18.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg19.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg20.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg21.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg22.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg23.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg24.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg25.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg26.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg27.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg28.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg29.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg30.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg31.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg32.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg33.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg34.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg35.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg36.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg37.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg38.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/z/zg39.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/bj.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/turn.png'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/t.png'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/f.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/yes.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/no.jpg'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/txt.png'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/g.png'
+            ,'http://gdjh.vxinyou.com/zt/zhenggu/images/e1.png'
+
+        ],
+    loading: LoadingSwit,
+    //done: orient
+});
+
+
+//分享处
+
+var open_id = '';
+
+$.getScript('http://event.vxinyou.com/wechat/JsApi/openid?mp_name=gedoujh&random=' + Math.random(), function() {
+
+    if (wechat_open_id == '')
+    {
+        location.href = wechat_login_url;
+    }
+    else
+    {
+        open_id = wechat_open_id;
+    }
+
+
+});
+function shareBack(share_type){
+    $.get(
+        'http://event.vxinyou.com/activity/picture/do_share', // 请求地址
+        { 
+            "picture_id"   : 3, 
+            "open_id"        : open_id,
+            "share_type"  : share_type
+        }, 
+        function(response){                    
+            if(response.success){
+                location.href = "http://gdjh.vxinyou.com/zt/zhenggu/";
+            }                            
+    });
+} 
+    
+// 加上随机参数以解决安卓缓存问题
+$.getScript('http://event.vxinyou.com/wechat/JsApi/share?mp_name=gedoujh&random=' + Math.random(), function() {
+
+    wx.ready(function () { 
+        // 分享到朋友圈
+        wx.onMenuShareTimeline({
+            title: '心脏病慎入！你玩过吗？愚人节最恐怖的诅咒整蛊，小心......', // 分享标题
+            link: 'http://gdjh.vxinyou.com/zt/zhenggu/', // 分享链接
+            imgUrl: 'http://gdjh.vxinyou.com/zt/zhenggu/images/share.jpg', // 分享图标
+            success: function () { 
+                // 用户确认分享后执行的回调函数
+                shareBack('timeline');
+            },
+            cancel: function () { 
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        // 分享给朋友
+        wx.onMenuShareAppMessage({
+            title: '心脏病慎入！你玩过吗？愚人节最恐怖的诅咒整蛊，小心.....', // 分享标题
+            desc: '你造吗，愚人节当天必须要说假话哦，不然就......', // 分享描述
+            link: 'http://gdjh.vxinyou.com/zt/zhenggu/', // 分享链接
+            imgUrl: 'http://gdjh.vxinyou.com/zt/zhenggu/images/share.jpg', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () { 
+                // 用户确认分享后执行的回调函数
+                shareBack('appmessage');
+            },
+            cancel: function () { 
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+
+});
+
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b68e1684045f02ef9cda470978a7b90d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
